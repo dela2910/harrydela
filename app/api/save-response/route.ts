@@ -3,7 +3,7 @@ import fs from "fs/promises";
 import path from "path";
 import { google } from "googleapis";
 
-const CSV_HEADERS = "firstName,lastName,job,createdAt\n";
+const CSV_HEADERS = "firstName,lastName,contact,job,createdAt\n";
 
 export async function POST(request: Request) {
   try {
@@ -20,13 +20,14 @@ export async function POST(request: Request) {
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet1!A:D",
+      range: "Sheet1!A:E",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
           [
             body.firstName,
             body.lastName,
+            body.contact,
             body.job,
             new Date().toISOString(),
           ],
