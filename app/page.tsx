@@ -232,6 +232,17 @@ export default function Home() {
                 No necesitas un título profesional para dar el siguiente paso. Solo claridad sobre tus intereses y ganas de avanzar.
               </p>
             </aside>
+            <aside className="rounded-2xl border border-indigo-100 bg-indigo-50/80 p-6 text-left shadow-md dark:border-indigo-900/40 dark:bg-indigo-950/40">
+              <h3 className="mb-3 text-base font-semibold text-indigo-900 dark:text-indigo-100">
+                ¿Por qué te pedimos tu contacto?
+              </h3>
+              <p className="mb-3 text-sm text-indigo-900/80 dark:text-indigo-100/80">
+                Queremos poder avisarte cuando exista una oportunidad que realmente encaje con tu perfil.
+              </p>
+              <p className="text-sm text-indigo-900/80 dark:text-indigo-100/80">
+                Tu información será utilizada únicamente para contactarte respecto a ofertas laborales. No compartimos tus datos con terceros sin tu autorización.
+              </p>
+            </aside>
           </div>
         </section>
       </main>
