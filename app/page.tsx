@@ -237,10 +237,10 @@ export default function Home() {
                 ¿Por qué te pedimos tu contacto?
               </h3>
               <p className="mb-3 text-sm text-indigo-900/80 dark:text-indigo-100/80">
-                Queremos poder avisarte cuando exista una oportunidad que realmente encaje con tu perfil.
+                  Actualmente estamos realizando un estudio para evaluar el lanzamiento de una nueva plataforma que facilite la contratación de personas sin título profesional.
               </p>
               <p className="text-sm text-indigo-900/80 dark:text-indigo-100/80">
-                Tu información será utilizada únicamente para contactarte respecto a ofertas laborales. No compartimos tus datos con terceros sin tu autorización.
+                Si decidimos avanzar, utilizaremos tu contacto únicamente para avisarte y ofrecerte acceso anticipado a oportunidades laborales. No compartiremos tu información con terceros.
               </p>
             </aside>
           </div>
