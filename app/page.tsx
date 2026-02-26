@@ -10,6 +10,7 @@ export default function Home() {
   const [customJob, setCustomJob] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [contact, setContact] = useState("");
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -35,7 +36,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ firstName, lastName, job: combinedJob }),
+        body: JSON.stringify({ firstName, lastName, contact, job: combinedJob }),
       });
 
       if (!res.ok) {
@@ -47,6 +48,7 @@ export default function Home() {
       setLastName("");
       setJobs([]);
       setCustomJob("");
+      setContact("");
     } catch (error) {
       setMessage("Hubo un problema al guardar los datos.");
     } finally {
@@ -111,7 +113,23 @@ export default function Home() {
               className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-50"
             />
               </div>
-
+              <div>
+              <label
+                htmlFor="contact"
+                className="mb-1 block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+              >
+                Contacto
+              </label>
+              <input
+                id="contact"
+                name="contact"
+                type="tel"
+                placeholder="Ej: +56 9 12345678"
+                value={contact}
+                onChange={(e) => setContact(e.target.value)}
+                className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-50"
+              />
+            </div>
               <div>
                 <p className="mb-1 block text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   Trabajo(s) que te interesa(n)
